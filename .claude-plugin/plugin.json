@@ -1,0 +1,13 @@
+{
+  "name": "lg",
+  "version": "1.0.0",
+  "description": "A learn-by-building system that turns project development into structured learning opportunities. Provides phased learning plans with dual-track progress tracking (learning milestones + project deliverables).",
+  "author": {
+    "name": "Wilson Lin",
+    "url": "https://github.com/liamlin"
+  },
+  "repository": "https://github.com/liamlin/learning-guide",
+  "homepage": "https://github.com/liamlin/learning-guide#readme",
+  "license": "MIT",
+  "keywords": ["learning", "education", "curriculum", "learn-by-building", "teaching"]
+}

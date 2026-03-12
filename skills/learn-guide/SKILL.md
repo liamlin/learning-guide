@@ -1,12 +1,12 @@
 ---
 name: Learn-by-Building Guide
-description: This skill should be used when the user asks to "learn [topic]", "teach me [topic]", "help me understand [topic]", "study [topic]", "guide me through [topic]", "I'm new to [topic]", "walk me through learning [topic]", "start learning", "create a learning plan", "set up a learning curriculum", mentions "learn-by-building", or uses /lg commands (/lg:init, /lg:next, /lg:review, /lg:decide, /lg:adjust, /lg:progress). It provides a structured learn-by-building system that turns real project work into learning opportunities with dual-track progress tracking. Also triggers when assisting a user whose project has a .learning/plan.md or .learning/progress.md file.
+description: This skill provides a structured learn-by-building system that turns real project work into learning opportunities with dual-track progress tracking (concepts + deliverables). It should be used when the user asks to "learn [topic]", "teach me [topic]", "create a learning plan", says "I'm new to [topic]", mentions "learn-by-building", uses /lg commands (/lg:init, /lg:next, /lg:review, /lg:decide, /lg:adjust, /lg:progress), or when the project contains .learning/plan.md or .learning/progress.md files.
 version: 1.0.0
 ---
 
 # Learn-by-Building Guide
 
-A teaching system that transforms project development (new features, refactoring, bug fixes) into structured learning opportunities. Every task becomes a chance to learn new concepts, design patterns, and production engineering practices — regardless of what technology or domain the learner is studying.
+Transform project development (new features, refactoring, bug fixes) into structured learning opportunities. Every task becomes a chance to learn new concepts, design patterns, and production engineering practices — regardless of what technology or domain the learner is studying.
 
 ## Command Lifecycle
 
@@ -19,13 +19,13 @@ The learning flow follows this cycle:
 5. **`/lg:adjust`** — Modify the plan mid-execution: change depth, reorder phases, update goals (optional, anytime)
 6. **`/lg:progress`** — Check dual-track status across all phases (anytime)
 
-Steps 2–4 repeat for each phase. Progress is saved incrementally by `/lg:next` (updates checkpoints) and `/lg:review` (writes journal) during the session. Hooks handle context loading across sessions — SessionStart restores state, PreCompact preserves it through compaction.
+Steps 2–4 repeat for each phase. Progress is saved incrementally by `/lg:next` (updates checkpoints) and `/lg:review` (writes journal) during the session. Hooks handle context loading across sessions — SessionStart restores state, PreCompact preserves it through compaction (defined in `hooks/hooks.json` at the plugin level).
 
 ## Core Teaching Principles
 
 ### 1. Dual-Track Progress
 
-Every Phase tracks two dimensions simultaneously:
+Track two dimensions simultaneously for every Phase:
 - **Learning Track** — Conceptual understanding, ability to explain trade-offs, design decision rationale
 - **Delivery Track** — Working code, passing tests, functional endpoints, verified deployments
 
@@ -112,19 +112,9 @@ Rules:
 
 ### 9. Glossary and Extended Reading
 
-Each phase should include a glossary/extended reading section alongside the Insight, presented AFTER the Insight block. Use this format:
+Each phase should include a glossary/extended reading section alongside the Insight, presented AFTER the Insight block. Use the template format defined in `references/file-conventions.md`.
 
-```
-📚 Glossary & Extended Reading ─────────────────
-• **[Term 1]** — [concise definition]
-• **[Term 2]** — [concise definition]
-
-🔗 Dive Deeper:
-- [Resource title] — [1-sentence description]
-─────────────────────────────────────────────────
-```
-
-Include 3-6 key terms per phase, ordered by appearance during implementation. Definitions should be practical ("what it means for your code") rather than academic. Omit the "Dive Deeper" section if no reliable links are found by the research sub-agent. See `references/file-conventions.md` for detailed guidelines.
+Include 3-6 key terms per phase, ordered by appearance during implementation. Definitions should be practical ("what it means for your code") rather than academic. Omit the "Dive Deeper" section if no reliable links are found by the research sub-agent.
 
 ### 10. Prerequisite-Based Phase Progression
 
@@ -161,7 +151,13 @@ Load each file only when its context is needed:
 - **`references/progress-management.md`** — Load during `/lg:next`, `/lg:review`. TodoWrite patterns, context-efficient loading, sub-agent delegation (research + verification), doc-grounding tool preferences.
 - **`references/analogy-mappings.md`** — Load during `/lg:next`, `/lg:decide`. Common background-specific analogy tables (Frontend↔Backend, etc.).
 - **`references/phase-template.md`** — Load during `/lg:init`. Phase structure, sizing guidelines, checkpoint design.
-- **`references/system-design-topics.md`** — Load during `/lg:init`. Topic catalog by tier (example; `/lg:init` generates domain-appropriate topics).
+- **`references/design-architecture-topics.md`** — Load during `/lg:init`. Topic catalog by tier (example; `/lg:init` generates domain-appropriate topics).
+
+### Example Files
+
+Working examples of completed output files in `examples/`:
+- **`examples/sample-plan.md`** — A completed `.learning/plan.md` for a NestJS backend project, showing phase structure, dependency graph, checkpoints, and design decision points.
+- **`examples/sample-progress.md`** — A `.learning/progress.md` mid-journey (1 phase completed, 1 in progress), showing dual-track checkpoint formatting and design decision recording.
 
 ### Commands
 

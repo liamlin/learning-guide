@@ -1,6 +1,6 @@
 ---
 description: Check dual-track learning progress (learning milestones + project deliverables)
-argument-hint: ""
+argument-hint:
 model: haiku
 ---
 

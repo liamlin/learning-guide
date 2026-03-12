@@ -1,8 +1,8 @@
-# System Design Topics Catalog
+# Design/Architecture Topics Catalog
 
-A reference catalog of System Design topics suitable for pairing with backend implementation phases. Each topic includes key concepts, common interview questions, and suggested learning activities.
+A reference catalog of design and architecture topics suitable for pairing with implementation phases. Each topic includes key concepts and suggested learning activities.
 
-> **Note:** This catalog focuses on backend/system design topics as an example. For other learning domains (frontend architecture, DevOps, data engineering, mobile development, etc.), the `/lg:init` flow will generate domain-appropriate topics based on the learner's specific goals.
+> **Note:** This catalog focuses on backend/system design topics as a starting example. For other learning domains (frontend architecture, DevOps, data engineering, mobile development, etc.), `/lg:init` generates domain-appropriate topics based on the learner's specific goals. Adapt or replace these topics as needed.
 
 ## Tier 1: Fundamentals (Pair with early phases)
 
@@ -127,16 +127,16 @@ A reference catalog of System Design topics suitable for pairing with backend im
 
 ### During /lg:init
 
-When analyzing a project and user goals, match implementation tasks to System Design topics:
+When analyzing a project and user goals, match implementation tasks to Design/Architecture topics:
 
 1. List all planned implementation tasks
-2. For each task, find the closest System Design topic from this catalog
+2. For each task, find the closest Design/Architecture topic from this catalog
 3. Ensure topics progress from Tier 1 → Tier 4 across phases
-4. Each phase should have exactly ONE primary System Design topic
+4. Each phase should have exactly ONE primary Design/Architecture topic
 
 ### During Phase Execution
 
-When presenting a System Design topic:
+When presenting a Design/Architecture topic:
 
 1. Start with the "Frontend analogy" to ground the concept
 2. Present 2-3 key concepts from the topic (not the entire list)
@@ -146,7 +146,7 @@ When presenting a System Design topic:
 
 ### For Design Decision Points
 
-System Design topics naturally generate decision points:
+Design/Architecture topics naturally generate decision points:
 
 - Caching → "What TTL should we use? What invalidation strategy?"
 - Auth → "JWT vs sessions? 404 vs 403 for unauthorized?"

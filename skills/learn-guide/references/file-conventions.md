@@ -46,6 +46,10 @@ Created during `/lg:init`, updated throughout. Structure:
 - [Goal 1]
 - [Goal 2]
 
+## Skill Goals
+- [Skill goal 1]
+- [Skill goal 2]
+
 ## Overall Progress
 - Phases completed: X/Y
 - Current phase: Phase N — [Name]

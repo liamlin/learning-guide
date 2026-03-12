@@ -1,6 +1,6 @@
 ---
 description: Initialize learning goals and create a customized phased learning plan
-argument-hint: ""
+argument-hint:
 ---
 
 # Learn-by-Building Initialization
@@ -49,7 +49,7 @@ Based on the interview + codebase analysis, create a customized learning plan:
 ### Phase Design Rules:
 - **6-10 phases** total, depending on scope
 - **Match checkpoint count** to the learner's chosen depth (Light: 1-2, Standard: 3-4, Deep: 5-6 checkpoints per track)
-- Each phase has **1 primary Design/Architecture topic** (consult `references/system-design-topics.md`)
+- Each phase has **1 primary Design/Architecture topic** (consult `references/design-architecture-topics.md`)
 - Each phase has **1-2 design decision points** (consult `references/phase-template.md`)
 - Phases progress from **foundational → advanced** (Tier 1 → Tier 4 topics)
 - Each phase produces **verifiable deliverables**

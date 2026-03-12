@@ -5,9 +5,5 @@
   "author": {
     "name": "Wilson Lin",
     "url": "https://github.com/liamlin"
-  },
-  "repository": "https://github.com/liamlin/learning-guide",
-  "homepage": "https://github.com/liamlin/learning-guide#readme",
-  "license": "MIT",
-  "keywords": ["learning", "education", "curriculum", "learn-by-building", "teaching"]
+  }
 }

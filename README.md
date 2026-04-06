@@ -22,31 +22,17 @@ Works for **any role** learning **any technology** — frontend devs learning ba
 
 ## Installation
 
-### From GitHub (Marketplace)
+Via the marketplace (recommended):
 
 ```
-/plugin marketplace add liamlin/learning-guide
-/plugin install lg@learning-guide
+/plugin marketplace add liamlin/claude-plugins
+/plugin install lg
 ```
 
-Then restart Claude Code.
+Or install directly from this repo:
 
-### Manual Install
-
-```bash
-git clone https://github.com/liamlin/learning-guide.git ~/.claude/plugins/lg
 ```
-
-Then add to your `~/.claude/plugins/installed_plugins.json`:
-
-```json
-"lg@learning-guide": [{
-  "scope": "user",
-  "installPath": "~/.claude/plugins/lg",
-  "version": "1.0.0",
-  "installedAt": "2026-01-01T00:00:00.000Z",
-  "lastUpdated": "2026-01-01T00:00:00.000Z"
-}]
+/plugin install liamlin/learning-guide
 ```
 
 ## Quick Start
